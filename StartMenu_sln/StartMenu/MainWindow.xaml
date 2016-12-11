@@ -1,0 +1,35 @@
+﻿<Window x:Class="StartMenu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StartMenu"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="870" Width="811">
+    <Grid x:Name="MainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="Grid_AllApps" HorizontalAlignment="Left" Height="371" Margin="522,294,0,0" VerticalAlignment="Top" Width="252">
+            <Rectangle x:Name="AllAppsHeader" Fill="#FF38A0BF" HorizontalAlignment="Left" Height="40" Stroke="#FF38A0BF" VerticalAlignment="Top" Width="251"/>
+            <Rectangle x:Name="AllAppsBackground" Fill="#FF38A0BF" HorizontalAlignment="Left" Height="346" Stroke="Black" VerticalAlignment="Top" Width="252" Opacity="0.4"/>
+            <Label x:Name="Label_AllApps" Content="All Apps" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="92" FontSize="18.667"/>
+        </Grid>
+        <Grid x:Name="Grid_PowerOptions" HorizontalAlignment="Left" Height="129" Margin="36,670,0,0" VerticalAlignment="Top" Width="737">
+            <Rectangle x:Name="PowerOptionsHeader" Fill="#FF38A0BF" HorizontalAlignment="Left" Height="40" Stroke="#FF38A0BF" VerticalAlignment="Top" Width="737"/>
+            <Rectangle x:Name="PowerOptionsBackground" Fill="#FF38A0BF" HorizontalAlignment="Left" Height="129" Stroke="Black" VerticalAlignment="Top" Width="737" Opacity="0.4"/>
+            <Label x:Name="Label_PowerOptions" Content="Power Options" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="146" FontSize="18.667"/>
+        </Grid>
+        <Grid x:Name="Grid_MostUsed" HorizontalAlignment="Left" Height="267" Margin="522,22,0,0" VerticalAlignment="Top" Width="252">
+            <Rectangle x:Name="MostUsedHeader" Fill="#FF38A0BF" HorizontalAlignment="Left" Height="40" Stroke="#FF38A0BF" VerticalAlignment="Top" Width="252"/>
+            <Rectangle x:Name="MostUsedBackground" Fill="#FF38A0BF" HorizontalAlignment="Left" Stroke="Black" Width="252" Opacity="0.4" Margin="0,0,0,39"/>
+            <Label x:Name="Label_MostUsed" Content="Most Used" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="110" FontSize="18.667"/>
+        </Grid>
+        <Grid x:Name="Grid_Favourites" HorizontalAlignment="Left" Height="643" Margin="36,22,0,0" VerticalAlignment="Top" Width="446">
+            <Rectangle x:Name="FavouritesHeader" Fill="#FF38A0BF" HorizontalAlignment="Left" Height="40" Stroke="#FF38A0BF" VerticalAlignment="Top" Width="446"/>
+            <Rectangle x:Name="FavouritesBackground" Fill="#FF38A0BF" HorizontalAlignment="Left" Height="620" Stroke="Black" VerticalAlignment="Top" Width="446" Opacity="0.4"/>
+            <Label x:Name="Label_Favourites" Content="Favourites" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="92" FontSize="18.667"/>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="242,360,0,0" VerticalAlignment="Top" Width="100"/>
+        </Grid>
+    </Grid>
+</Window>
