@@ -39,5 +39,7 @@
             <Image x:Name="Favourite4" HorizontalAlignment="Left" Height="145" Margin="246,248,0,0" VerticalAlignment="Top" Width="145" Source="/images/dark/appbar.acorn.png"/>
             <Image x:Name="Favourite1" HorizontalAlignment="Left" Height="145" Margin="65,82,0,0" VerticalAlignment="Top" Width="145" Source ="/images/dark/appbar.acorn.png"/>
         </Grid>
+        <TextBox x:Name="textBox_Search" HorizontalAlignment="Left" Height="25" Margin="534,606,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="230
+                 " TextChanged="textBox_TextChanged" FontSize="16"/>
     </Grid>
 </Window>

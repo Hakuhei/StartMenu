@@ -24,5 +24,10 @@ namespace StartMenu
         {
             InitializeComponent();
         }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
