@@ -12,8 +12,5 @@ namespace StartMenu
         public List<MenuApplication> appList = new List<MenuApplication>();
 
         public DataBase() { }
-
-
-
     }
 }

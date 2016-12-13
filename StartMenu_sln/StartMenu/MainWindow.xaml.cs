@@ -28,15 +28,10 @@ namespace StartMenu
             InitializeComponent();
             data = new DataBase();
             InitializeApplications();
-
+            generateApplicationList();
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-        // Generates applications on the UI
-        private void generateApplicationList()
         {
 
         }
@@ -53,6 +48,24 @@ namespace StartMenu
             MenuApplication webCamApp = new MenuApplication(data,"Web Cam", "/images/dark/appbar.webcam.png");
 
             data.appList.OrderBy(x => x.name);
+        }
+
+        // Generates applications on the UI
+        private void generateApplicationList()
+        {
+
+            Image[] img = new Image[20];
+            //for (int i = 0; i < 20; i++)
+            // {
+            if (img[0] != null)
+            {
+                img[0].Source = new BitmapImage(new Uri("D:/Libraries/Git/StartMenu/StartMenu_sln/StartMenu/appbar.acorn.png", UriKind.Absolute));
+                img[0].Width = 50;
+                img[0].Height = 50;
+                StackPanel_AllApps.Children.Add(img[0]);
+            }
+           // }
+          
         }
     }
 }

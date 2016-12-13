@@ -19,9 +19,9 @@
             <TextBox x:Name="textBox_Search" HorizontalAlignment="Left" Height="25" Margin="10,316,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="230
                  " TextChanged="textBox_TextChanged" FontSize="16"/>
         </Grid>
-        <Grid x:Name="Grid_PowerOptions" HorizontalAlignment="Left" Height="129" Margin="36,670,0,0" VerticalAlignment="Top" Width="737">
+        <Grid x:Name="Grid_PowerOptions" HorizontalAlignment="Left" Height="145" Margin="36,656,0,0" VerticalAlignment="Top" Width="737">
             <Rectangle x:Name="PowerOptionsHeader" Fill="#FF38A0BF" HorizontalAlignment="Left" Height="40" Stroke="#FF38A0BF" VerticalAlignment="Top" Width="737"/>
-            <Rectangle x:Name="PowerOptionsBackground" Fill="#FF2F6D99" HorizontalAlignment="Left" Height="129" Stroke="White" VerticalAlignment="Top" Width="737" Opacity="0.4"/>
+            <Rectangle x:Name="PowerOptionsBackground" Fill="#FF2F6D99" HorizontalAlignment="Left" Height="135" Stroke="White" VerticalAlignment="Top" Width="737" Opacity="0.4"/>
             <Label x:Name="Label_PowerOptions" Content="Power Options" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="146" FontSize="18.667"/>
         </Grid>
         <Grid x:Name="Grid_MostUsed" HorizontalAlignment="Left" Height="267" Margin="522,22,0,0" VerticalAlignment="Top" Width="252">
@@ -37,7 +37,7 @@
             <Rectangle x:Name="Favourite2Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="246,56,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
             <Rectangle x:Name="Favourite3Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="65,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
             <Rectangle x:Name="Favourite4Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="246,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
-            <Image x:Name="Favourite2" HorizontalAlignment="Left" Height="145" Margin="246,56,0,0" VerticalAlignment="Top" Width="145" Source ="/images/dark/appbar.acorn.png"/>
+            <Image x:Name="Favourite2" HorizontalAlignment="Left" Height="145" Margin="246,56,0,0" VerticalAlignment="Top" Width="145" Source ="D:/Libraries/Git/StartMenu/StartMenu_sln/StartMenu/appbar.acorn.png"/>
             <Image x:Name="Favourite3" HorizontalAlignment="Left" Height="145" Margin="65,222,0,0" VerticalAlignment="Top" Width="145" Source ="/images/dark/appbar.acorn.png" RenderTransformOrigin="-3.441,0.517"/>
             <Image x:Name="Favourite4" HorizontalAlignment="Left" Height="145" Margin="246,222,0,0" VerticalAlignment="Top" Width="145" Source="/images/dark/appbar.acorn.png"/>
             <Image x:Name="Favourite1" HorizontalAlignment="Left" Height="145" Margin="65,56,0,0" VerticalAlignment="Top" Width="145" Source ="/images/dark/appbar.acorn.png"/>

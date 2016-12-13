@@ -55,7 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Application.cs" />
+    <Compile Include="DataBase.cs" />
+    <Compile Include="MenuApplication.cs" />
     <Compile Include="Trie.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
