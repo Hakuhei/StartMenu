@@ -6,6 +6,14 @@
         xmlns:local="clr-namespace:StartMenu"
         mc:Ignorable="d"
         Title="MainWindow" Height="870" Width="811">
+
+    <Window.Resources>
+        <ContextMenu x:Key="favouriteContextMenu">
+            <MenuItem Header="New Favourite" 
+                      Command=""/>
+        </ContextMenu>
+    </Window.Resources>
+    
     <Grid x:Name="MainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -24,7 +32,7 @@
             <Rectangle x:Name="PowerOptionsBackground" Fill="#FF2F6D99" HorizontalAlignment="Left" Height="135" Stroke="White" VerticalAlignment="Top" Width="737" Opacity="0.4"/>
             <Label x:Name="Label_PowerOptions" Content="Power Options" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="146" FontSize="18.667" Foreground="White"/>
             <Button x:Name="button_ShutDown" Content="Shut Down" HorizontalAlignment="Left" Margin="68,45,0,0" VerticalAlignment="Top" Width="119" Height="85" RenderTransformOrigin="0.733,0.729" Click="button_ShutDown_Click" Background="#FF387789" Foreground="White"/>
-            <Button x:Name="button_Restart" Content="Restart" HorizontalAlignment="Left" Margin="192,45,0,0" VerticalAlignment="Top" Width="119" Height="85" RenderTransformOrigin="0.733,0.729" Background="#FF387789" Foreground="White" Click="button_Restart_Click" MouseEnter="button_MouseEnter"/>
+            <Button x:Name="button_Restart" Content="Restart" HorizontalAlignment="Left" Margin="192,45,0,0" VerticalAlignment="Top" Width="119" Height="85" RenderTransformOrigin="0.733,0.729" Background="#FF387789" Foreground="White" Click="button_Restart_Click"/>
             <Button x:Name="button_Sleep" Content="Sleep" HorizontalAlignment="Left" Margin="316,45,0,0" VerticalAlignment="Top" Width="119" Height="85" RenderTransformOrigin="0.733,0.729" Background="#FF387789" Foreground="White" Click="button_Sleep_Click"/>
             <Button x:Name="button_LogOut" Content="Log Out" HorizontalAlignment="Left" Margin="440,45,0,0" VerticalAlignment="Top" Width="119" Height="85" RenderTransformOrigin="0.733,0.729" Background="#FF387789" Foreground="White" Click="button_LogOut_Click"/>
             <Button x:Name="button_SwitchUser" Content="Switch User" HorizontalAlignment="Left" Margin="564,45,0,0" VerticalAlignment="Top" Width="119" Height="85" RenderTransformOrigin="0.733,0.729" Background="#FF387789" Foreground="White" Click="button_SwitchUser_Click"/>
@@ -42,10 +50,14 @@
             <Rectangle x:Name="Favourite2Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="246,56,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
             <Rectangle x:Name="Favourite3Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="65,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
             <Rectangle x:Name="Favourite4Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="246,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
-            <Image x:Name="Favourite2" HorizontalAlignment="Left" Height="145" Margin="246,56,0,0" VerticalAlignment="Top" Width="145" Source ="D:/Libraries/Git/StartMenu/StartMenu_sln/StartMenu/appbar.acorn.png"/>
-            <Image x:Name="Favourite3" HorizontalAlignment="Left" Height="145" Margin="65,222,0,0" VerticalAlignment="Top" Width="145" Source ="/images/dark/appbar.acorn.png" RenderTransformOrigin="-3.441,0.517"/>
-            <Image x:Name="Favourite4" HorizontalAlignment="Left" Height="145" Margin="246,222,0,0" VerticalAlignment="Top" Width="145" Source="/images/dark/appbar.acorn.png"/>
-            <Image x:Name="Favourite1" HorizontalAlignment="Left" Height="145" Margin="65,56,0,0" VerticalAlignment="Top" Width="145" Source ="/images/dark/appbar.acorn.png"/>
+            <Image x:Name="Favourite2" HorizontalAlignment="Left" Height="145" Margin="246,56,0,0" VerticalAlignment="Top" Width="145" Source ="D:/Libraries/Git/StartMenu/StartMenu_sln/StartMenu/appbar.acorn.png"
+                    ContextMenu="{StaticResource favouriteContextMenu}"/>
+            <Image x:Name="Favourite3" HorizontalAlignment="Left" Height="145" Margin="65,222,0,0" VerticalAlignment="Top" Width="145" Source ="/images/dark/appbar.acorn.png" RenderTransformOrigin="-3.441,0.517"
+                    ContextMenu="{StaticResource favouriteContextMenu}"/>
+            <Image x:Name="Favourite4" HorizontalAlignment="Left" Height="145" Margin="246,222,0,0" VerticalAlignment="Top" Width="145" Source="/images/dark/appbar.acorn.png"
+                    ContextMenu="{StaticResource favouriteContextMenu}"/>
+            <Image x:Name="Favourite1" HorizontalAlignment="Left" Height="145" Margin="65,56,0,0" VerticalAlignment="Top" Width="145" Source ="/images/dark/appbar.acorn.png"
+                    ContextMenu="{StaticResource favouriteContextMenu}"/>
         </Grid>
     </Grid>
 </Window>

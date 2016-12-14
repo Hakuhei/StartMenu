@@ -73,11 +73,6 @@ namespace StartMenu
 
         }
 
-        private void favouriteRightclick()
-        {
-
-        }
-
         // Quits program
         private void button_ShutDown_Click(object sender, RoutedEventArgs e)
         {

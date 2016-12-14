@@ -1,10 +1,10 @@
-D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\bin\Debug\StartMenu.exe.config
-D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\bin\Debug\StartMenu.exe
-D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\bin\Debug\StartMenu.pdb
 D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\obj\Debug\MainWindow.g.cs
 D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\obj\Debug\App.g.cs
 D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu_MarkupCompile.cache
 D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu_MarkupCompile.lref
+D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\bin\Debug\StartMenu.exe.config
+D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\bin\Debug\StartMenu.exe
+D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\bin\Debug\StartMenu.pdb
 D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\obj\Debug\MainWindow.baml
 D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu.g.resources
 D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu.Properties.Resources.resources
