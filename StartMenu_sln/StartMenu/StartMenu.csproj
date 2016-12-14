@@ -109,10 +109,10 @@
     <Resource Include="appbar.acorn2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\chrome.png" />
+    <Resource Include="images\dark\appbar.os.chromium.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\dark\appbar.os.chromium.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

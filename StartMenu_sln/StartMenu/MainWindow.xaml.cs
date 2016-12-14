@@ -118,7 +118,13 @@ namespace StartMenu
                 img = ((ContextMenu)mnu.Parent).PlacementTarget as Image;
             }
 
-            img.Source = new BitmapImage(new Uri("D:/Libraries/Git/StartMenu/StartMenu_sln/StartMenu/images/dark/appbar.os.chromium.png"));
+            // Test Code
+            string str = Directory.GetCurrentDirectory();
+            str = str + @"\images\dark\appbar.os.chromium.png";
+
+            Label_PowerOptions.Content = str;
+
+            img.Source = new BitmapImage(new Uri(str));
             
         }
     }
