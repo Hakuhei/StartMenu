@@ -137,6 +137,8 @@ namespace StartMenu
             // Updates icon            
             img.Source = chromeApp.img.Source;
             img.Name = chromeApp.name;
+
+            Label_PowerOptions.Content = img.Name;
             
         }
     }
