@@ -24,12 +24,22 @@ namespace StartMenu
     {
         private DataBase data;
 
+
+        MenuApplication chromeApp;
+        MenuApplication photoShopApp;
+        MenuApplication illustratorApp;
+        MenuApplication deBugApp;
+        MenuApplication afterEffectsApp;
+        MenuApplication paintApp;
+        MenuApplication webCamApp;
+
         public MainWindow()
         {
             InitializeComponent();
             data = new DataBase();
             InitializeApplications();
             generateApplicationList();
+            
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -40,13 +50,16 @@ namespace StartMenu
         // Initializes applications
         private void InitializeApplications()
         {
-            MenuApplication chromeApp = new MenuApplication(data,"Google Chrome", "/images/dark/appbar.chromium.png");
-            MenuApplication photoShopApp = new MenuApplication(data,"Adobe Photoshop", "/images/dark/appbar.adobe.photoshop.png");
-            MenuApplication illustratorApp = new MenuApplication(data,"Adobe Illustrator", "/images/dark/appbar.adobe.illustrator.png");
-            MenuApplication deBugApp = new MenuApplication(data,"Debug", "/images/dark/appbar.bug.png");
-            MenuApplication afterEffectsApp = new MenuApplication(data,"Adobe AfterEffects", "/images/dark/appbar.adobe.aftereffects.png");
-            MenuApplication paintApp= new MenuApplication(data,"Paint", "/images/dark/appbar.draw.pencil.png");
-            MenuApplication webCamApp = new MenuApplication(data,"Web Cam", "/images/dark/appbar.webcam.png");
+            string directory;
+            directory = Directory.GetCurrentDirectory();
+
+            chromeApp = new MenuApplication(data,"Google_Chrome",(directory + @"\images\dark\appbar.os.chromium.png"));
+            photoShopApp = new MenuApplication(data,"Adobe_Photoshop", directory + @"\images\dark\appbar.adobe.photoshop.png");
+            illustratorApp = new MenuApplication(data,"Adobe_Illustrator", directory + @"\images\dark\appbar.adobe.illustrator.png");
+            deBugApp = new MenuApplication(data,"Debug", directory + @"\images\dark\appbar.bug.png");
+            afterEffectsApp = new MenuApplication(data,"Adobe_AfterEffects", directory + @"\images\dark\appbar.adobe.aftereffects.png");
+            paintApp= new MenuApplication(data,"Paint", directory + @"\images\dark\appbar.draw.pencil.png");
+            webCamApp = new MenuApplication(data,"Web_Cam", directory + @"\images\dark\appbar.webcam.png");
 
             data.appList.OrderBy(x => x.name);
         }
@@ -118,13 +131,12 @@ namespace StartMenu
                 img = ((ContextMenu)mnu.Parent).PlacementTarget as Image;
             }
 
-            // Test Code
-            string str = Directory.GetCurrentDirectory();
-            str = str + @"\images\dark\appbar.os.chromium.png";
+            
 
-            Label_PowerOptions.Content = str;
-
-            img.Source = new BitmapImage(new Uri(str));
+         
+            // Updates icon            
+            img.Source = chromeApp.img.Source;
+            img.Name = chromeApp.name;
             
         }
     }

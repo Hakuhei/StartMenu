@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace StartMenu
 {
@@ -11,15 +8,15 @@ namespace StartMenu
     {
         public String name;
         public int Usage;
-        public String imgDirectory;
-        public String tooltip;
+        public Image img = new Image();
 
         // Initialize each application with a name and icon directory
         public MenuApplication(DataBase data, String name, string imgDirectory)
         {
             this.name = name;
+            img.Name = name;
             Usage = 0;
-            this.imgDirectory = imgDirectory;
+            img.Source = new BitmapImage(new Uri(imgDirectory));
             data.appList.Add(this);
         }
 
