@@ -12,3 +12,29 @@ D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu.csproj.Ge
 D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu.exe
 D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu.pdb
 D:\Libraries\Git\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu.csprojResolveAssemblyReference.cache
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\MainWindow.g.cs
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\PickFavourite.g.cs
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\App.g.cs
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu_MarkupCompile.cache
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu_MarkupCompile.lref
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\StartMenu.exe.config
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\StartMenu.exe
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\StartMenu.pdb
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\MainWindow.baml
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\PickFavourite.baml
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu.g.resources
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu.Properties.Resources.resources
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu.csproj.GenerateResource.Cache
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu.exe
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu.pdb
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\Microsoft.WindowsAPICodePack.Sensors.dll
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\Microsoft.WindowsAPICodePack.xml
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.xml
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\Microsoft.WindowsAPICodePack.Sensors.xml
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+C:\4th Year\4HC3\StartMenu\StartMenu_sln\StartMenu\obj\Debug\StartMenu.csprojResolveAssemblyReference.cache

@@ -11,9 +11,11 @@
         <ContextMenu x:Key="favouriteContextMenu">
             <MenuItem Header="New Favourite" 
                       Click="newFavourite_Click"/>
+            <MenuItem Header="Remove Favourite" 
+                      Click="removeFavourite_Click"/>
         </ContextMenu>
     </Window.Resources>
-    
+
     <Grid x:Name="MainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -50,14 +52,33 @@
             <Rectangle x:Name="Favourite2Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="246,56,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
             <Rectangle x:Name="Favourite3Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="65,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
             <Rectangle x:Name="Favourite4Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="246,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
-            <Image x:Name="Favourite2" HorizontalAlignment="Left" Height="145" Margin="246,56,0,0" VerticalAlignment="Top" Width="145" Source ="D:/Libraries/Git/StartMenu/StartMenu_sln/StartMenu/appbar.acorn.png"
-                    ContextMenu="{StaticResource favouriteContextMenu}"/>
-            <Image x:Name="Favourite3" HorizontalAlignment="Left" Height="145" Margin="65,222,0,0" VerticalAlignment="Top" Width="145" Source ="/images/dark/appbar.acorn.png" RenderTransformOrigin="-3.441,0.517"
-                    ContextMenu="{StaticResource favouriteContextMenu}"/>
+            <Image x:Name="Favourite2" HorizontalAlignment="Left" Height="145" Margin="246,56,0,0" VerticalAlignment="Top" Width="145"
+                    ContextMenu="{StaticResource favouriteContextMenu}" MouseLeftButtonDown="Favourite_MouseLeftButtonDown" AllowDrop="True" Drop="Favourite2_Drop"/>
+            <Image x:Name="Favourite3" HorizontalAlignment="Left" Height="145" Margin="65,222,0,0" VerticalAlignment="Top" Width="145" Source ="/images/dark/appbar.acorn.png"
+                    ContextMenu="{StaticResource favouriteContextMenu}" MouseLeftButtonDown="Favourite_MouseLeftButtonDown" AllowDrop="True" Drop="Favourite2_Drop"/>
             <Image x:Name="Favourite4" HorizontalAlignment="Left" Height="145" Margin="246,222,0,0" VerticalAlignment="Top" Width="145" Source="/images/dark/appbar.acorn.png"
-                    ContextMenu="{StaticResource favouriteContextMenu}"/>
+                    ContextMenu="{StaticResource favouriteContextMenu}" MouseLeftButtonDown="Favourite_MouseLeftButtonDown" AllowDrop="True" Drop="Favourite2_Drop"/>
             <Image x:Name="Favourite1" HorizontalAlignment="Left" Height="145" Margin="65,56,0,0" VerticalAlignment="Top" Width="145" Source ="/images/dark/appbar.acorn.png"
-                    ContextMenu="{StaticResource favouriteContextMenu}"/>
+                    ContextMenu="{StaticResource favouriteContextMenu}" MouseLeftButtonDown="Favourite_MouseLeftButtonDown" AllowDrop="True" Drop="Favourite2_Drop"/>
+            <Label x:Name="F1text" Content="Default" HorizontalAlignment="Center" Margin="65,175,236,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="White" Width="145" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="F2text" Content="Default" HorizontalAlignment="Center" Margin="246,175,55,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="White" Width="145" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="F3text" Content="Default" HorizontalAlignment="Center" Margin="65,338,236,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="White" Width="145" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="F4text" Content="Default" HorizontalAlignment="Center" Margin="246,338,55,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="White" Width="145" FontWeight="Bold" FontSize="14"/>
+            <Rectangle x:Name="Favourite5Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="65,393,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
+            <Rectangle x:Name="Favourite6Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="246,393,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
+            <Image x:Name="Favourite5" HorizontalAlignment="Left" Height="145" Margin="65,393,0,0" VerticalAlignment="Top" Width="145" Source ="appbar.acorn10.png" RenderTransformOrigin="-3.441,0.517"
+                ContextMenu="{StaticResource favouriteContextMenu}" MouseLeftButtonDown="Favourite_MouseLeftButtonDown" AllowDrop="True" Drop="Favourite2_Drop"/>
+            <Image x:Name="Favourite6" HorizontalAlignment="Left" Height="145" Margin="246,393,0,0" VerticalAlignment="Top" Width="145" Source="appbar.acorn11.png"
+                ContextMenu="{StaticResource favouriteContextMenu}" MouseLeftButtonDown="Favourite_MouseLeftButtonDown" AllowDrop="True" Drop="Favourite2_Drop">
+            </Image>
+            <Label x:Name="F5text" Content="Default" HorizontalAlignment="Center" Margin="65,509,236,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="White" Width="145" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="F6text" Content="Default" HorizontalAlignment="Center" Margin="246,509,55,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="White" Width="145" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="F1text_Copy" Content="Default" HorizontalAlignment="Center" Margin="65.2,175,235.8,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="Transparent" Width="145" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="F2text_Copy" Content="Default" HorizontalAlignment="Center" Margin="65.2,175,235.8,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="Transparent" Width="145" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="F3text_Copy" Content="Default" HorizontalAlignment="Center" Margin="65.2,175,235.8,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="Transparent" Width="145" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="F4text_Copy" Content="Default" HorizontalAlignment="Center" Margin="65.2,175,235.8,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="Transparent" Width="145" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="F5text_Copy" Content="Default" HorizontalAlignment="Center" Margin="65.2,175,235.8,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="Transparent" Width="145" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="F6text_Copy" Content="Default" HorizontalAlignment="Center" Margin="65.2,175,235.8,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="Transparent" Width="145" FontWeight="Bold" FontSize="14"/>
         </Grid>
     </Grid>
 </Window>
