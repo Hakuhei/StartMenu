@@ -77,5 +77,39 @@ namespace StartMenu
         {
 
         }
+
+        // Quits program
+        private void button_ShutDown_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        
+        // Simulates restart
+        private void button_Restart_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+
+            System.Threading.Thread.Sleep(3000);
+
+            this.Show();
+
+        }
+
+        // Sleeps until user does something
+        private void button_Sleep_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void button_LogOut_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_SwitchUser_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
