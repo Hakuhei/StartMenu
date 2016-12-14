@@ -13,7 +13,7 @@
 
         <Grid x:Name="Grid_AllApps" HorizontalAlignment="Left" Height="371" Margin="522,294,0,0" VerticalAlignment="Top" Width="252">
             <Rectangle x:Name="AllAppsHeader" Fill="#FF38A0BF" HorizontalAlignment="Left" Height="40" Stroke="#FF38A0BF" VerticalAlignment="Top" Width="251"/>
-            <Label x:Name="Label_AllApps" Content="All Apps" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="92" FontSize="18.667"/>
+            <Label x:Name="Label_AllApps" Content="All Apps" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="92" FontSize="18.667" Foreground="White"/>
             <StackPanel x:Name="StackPanel_AllApps" HorizontalAlignment="Left" Height="276" Margin="0,40,0,0" VerticalAlignment="Top" Width="251" Background="#FF2F6D99" Opacity="0.4"/>
             <Rectangle x:Name="MostUsedBackground_Copy" Fill="#FF2F6D99" HorizontalAlignment="Left" Stroke="#FF2F6D99" Width="251" Opacity="0.4" Margin="0,316,0,22"/>
             <TextBox x:Name="textBox_Search" HorizontalAlignment="Left" Height="25" Margin="10,316,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="230
@@ -22,17 +22,22 @@
         <Grid x:Name="Grid_PowerOptions" HorizontalAlignment="Left" Height="145" Margin="36,656,0,0" VerticalAlignment="Top" Width="737">
             <Rectangle x:Name="PowerOptionsHeader" Fill="#FF38A0BF" HorizontalAlignment="Left" Height="40" Stroke="#FF38A0BF" VerticalAlignment="Top" Width="737"/>
             <Rectangle x:Name="PowerOptionsBackground" Fill="#FF2F6D99" HorizontalAlignment="Left" Height="135" Stroke="White" VerticalAlignment="Top" Width="737" Opacity="0.4"/>
-            <Label x:Name="Label_PowerOptions" Content="Power Options" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="146" FontSize="18.667"/>
+            <Label x:Name="Label_PowerOptions" Content="Power Options" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="146" FontSize="18.667" Foreground="White"/>
+            <Button x:Name="button_ShutDown" Content="Shut Down" HorizontalAlignment="Left" Margin="68,45,0,0" VerticalAlignment="Top" Width="119" Height="85" RenderTransformOrigin="0.733,0.729" Click="button_Click" Background="#FF387789" Foreground="White"/>
+            <Button x:Name="button_Restart" Content="Restart" HorizontalAlignment="Left" Margin="192,45,0,0" VerticalAlignment="Top" Width="119" Height="85" RenderTransformOrigin="0.733,0.729" Background="#FF387789" Foreground="White"/>
+            <Button x:Name="button_Sleep" Content="Sleep" HorizontalAlignment="Left" Margin="316,45,0,0" VerticalAlignment="Top" Width="119" Height="85" RenderTransformOrigin="0.733,0.729" Background="#FF387789" Foreground="White"/>
+            <Button x:Name="button_LogOut" Content="Log Out" HorizontalAlignment="Left" Margin="440,45,0,0" VerticalAlignment="Top" Width="119" Height="85" RenderTransformOrigin="0.733,0.729" Background="#FF387789" Foreground="White"/>
+            <Button x:Name="button_SwitchUser" Content="Switch User" HorizontalAlignment="Left" Margin="564,45,0,0" VerticalAlignment="Top" Width="119" Height="85" RenderTransformOrigin="0.733,0.729" Background="#FF387789" Foreground="White"/>
         </Grid>
         <Grid x:Name="Grid_MostUsed" HorizontalAlignment="Left" Height="267" Margin="522,22,0,0" VerticalAlignment="Top" Width="252">
             <Rectangle x:Name="MostUsedHeader" Fill="#FF38A0BF" HorizontalAlignment="Left" Height="40" Stroke="#FF38A0BF" VerticalAlignment="Top" Width="252"/>
             <Rectangle x:Name="MostUsedBackground" Fill="#FF2F6D99" HorizontalAlignment="Left" Stroke="White" Width="252" Opacity="0.4" Margin="0,0,0,39"/>
-            <Label x:Name="Label_MostUsed" Content="Most Used" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="110" FontSize="18.667"/>
+            <Label x:Name="Label_MostUsed" Content="Most Used" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="110" FontSize="18.667" Foreground="White"/>
         </Grid>
         <Grid x:Name="Grid_Favourites" HorizontalAlignment="Left" Height="643" Margin="36,22,0,0" VerticalAlignment="Top" Width="446">
             <Rectangle x:Name="FavouritesHeader" Fill="#FF38A0BF" HorizontalAlignment="Left" Height="40" Stroke="#FF38A0BF" VerticalAlignment="Top" Width="446"/>
             <Rectangle x:Name="FavouritesBackground" Fill="#FF2F6D99" HorizontalAlignment="Left" Height="620" Stroke="White" VerticalAlignment="Top" Width="446" Opacity="0.4"/>
-            <Label x:Name="Label_Favourites" Content="Favourites" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="92" FontSize="18.667"/>
+            <Label x:Name="Label_Favourites" Content="Favourites" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="92" FontSize="18.667" Foreground="White"/>
             <Rectangle x:Name="Favourite1Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="65,56,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
             <Rectangle x:Name="Favourite2Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="246,56,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>
             <Rectangle x:Name="Favourite3Background" Fill="Black" HorizontalAlignment="Left" Height="145" Margin="65,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="145" RenderTransformOrigin="4.041,-0.821" Opacity="0.8"/>

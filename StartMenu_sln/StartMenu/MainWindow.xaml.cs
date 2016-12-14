@@ -67,5 +67,15 @@ namespace StartMenu
            // }
           
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void favouriteRightclick()
+        {
+
+        }
     }
 }
