@@ -10,7 +10,7 @@
     <Window.Resources>
         <ContextMenu x:Key="favouriteContextMenu">
             <MenuItem Header="New Favourite" 
-                      Command=""/>
+                      Click="newFavourite_Click"/>
         </ContextMenu>
     </Window.Resources>
     

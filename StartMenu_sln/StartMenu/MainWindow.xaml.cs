@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -105,6 +106,20 @@ namespace StartMenu
         private void button_SwitchUser_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void newFavourite_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem mnu = sender as MenuItem;
+            Image img = null;
+
+            if (mnu != null)
+            {
+                img = ((ContextMenu)mnu.Parent).PlacementTarget as Image;
+            }
+
+            img.Source = new BitmapImage(new Uri("D:/Libraries/Git/StartMenu/StartMenu_sln/StartMenu/images/dark/appbar.os.chromium.png"));
+            
         }
     }
 }
