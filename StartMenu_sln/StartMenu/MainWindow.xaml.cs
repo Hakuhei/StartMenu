@@ -24,6 +24,9 @@ namespace StartMenu
     public partial class MainWindow : Window
     {
         private DataBase data;
+        String searchTerm;
+        String[] appNames = { "Adobe AfterEffects", "Adobe Illustrator", "Adobe Photoshop", "Debug", "Google Chrome", "Paint", "Web Cam", "Windows Store" };
+        MenuApplication storeApp;
         MenuApplication fileAdd;
         MenuApplication folderAdd;
         MenuApplication addApp;
@@ -42,7 +45,112 @@ namespace StartMenu
             data = new DataBase();
             InitializeApplications();
             generateApplicationList();
+            searchTerm = "";
+            InitAllApps(searchTerm);
             
+        }
+
+        private void InitAllApps(String search)
+        {
+
+
+            var indices = new List<int>();
+
+            for (int i = 0; i < appNames.Length; i++)
+                if (appNames[i].IndexOf(search, StringComparison.OrdinalIgnoreCase) >= 0)
+                    indices.Add(i);
+            int j = 0;
+            for(int i = 0; i<appNames.Length; i++)
+            {
+                if (j < indices.Count)
+                {
+                    makeAllButton(j, appNames[indices[j]]);
+                    j++;
+                }
+                else
+                {
+                    makeAllButton(j, "");
+                    j++;
+                }
+            }
+            
+        }
+
+        private void makeAllButton(int buttoncount, String aName)
+        {
+            switch (buttoncount)
+            {
+                case 0:
+                    if (aName.Equals(""))
+                        AA1.IsEnabled = false;
+                    else
+                        AA1.IsEnabled = true;
+
+                    AA1.Content = aName;
+                    break;
+
+                case 1:
+                    if (aName.Equals(""))
+                        AA2.IsEnabled = false;
+                    else
+                        AA2.IsEnabled = true;
+
+                    AA2.Content = aName;
+                    break;
+                case 2:
+                    if (aName.Equals(""))
+                        AA3.IsEnabled = false;
+                    else
+                        AA3.IsEnabled = true;
+
+                    AA3.Content = aName;
+                    break;
+                case 3:
+                    if (aName.Equals(""))
+                        AA4.IsEnabled = false;
+                    else
+                        AA4.IsEnabled = true;
+
+                    AA4.Content = aName;
+                    break;
+                case 4:
+                    if (aName.Equals(""))
+                        AA5.IsEnabled = false;
+                    else
+                        AA5.IsEnabled = true;
+
+                    AA5.Content = aName;
+                    break;
+                case 5:
+                    if (aName.Equals(""))
+                        AA6.IsEnabled = false;
+                    else
+                        AA6.IsEnabled = true;
+
+                    AA6.Content = aName;
+                    break;
+                case 6:
+                    if (aName.Equals(""))
+                        AA7.IsEnabled = false;
+                    else
+                        AA7.IsEnabled = true;
+
+                    AA7.Content = aName;
+                    break;
+                case 7:
+                    if (aName.Equals(""))
+                        AA8.IsEnabled = false;
+                    else
+                        AA8.IsEnabled = true;
+
+                    AA8.Content = aName;
+                    break;
+            }
+            if (aName.Equals(""))
+                StackPanel_AllApps.Height = 276;
+            else
+                StackPanel_AllApps.Height = 316;
+            return;
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -66,6 +174,7 @@ namespace StartMenu
             afterEffectsApp = new MenuApplication(data, "Adobe AfterEffects", directory + @"\images\dark\appbar.adobe.aftereffects.png");
             paintApp= new MenuApplication(data, "Paint", directory + @"\images\dark\appbar.draw.pencil.png");
             webCamApp = new MenuApplication(data, "Web Cam",  directory + @"\images\dark\appbar.webcam.png");
+            storeApp = new MenuApplication(data, "Windows Store", directory + @"\images\dark\appbar.marketplace.png");
 
             Favourite1.Source = addApp.img.Source;
             Favourite2.Source = addApp.img.Source;
@@ -79,6 +188,9 @@ namespace StartMenu
             F4text.Content = addApp.nameSpaces;
             F5text.Content = addApp.nameSpaces;
             F6text.Content = addApp.nameSpaces;
+            MU1.Content = chromeApp.nameSpaces;
+            MU2.Content = photoShopApp.nameSpaces;
+            MU3.Content = paintApp.nameSpaces;
 
 
             //data.appList.OrderBy(x => x.name);
@@ -267,7 +379,7 @@ namespace StartMenu
                     Process.Start(getDirectory);
 
                 }
-
+                
                 return;
             }
             PickFavourite secondWindow = new PickFavourite(img, lbl, lbl2);
@@ -309,6 +421,72 @@ namespace StartMenu
                     lbl.Content = System.IO.Path.GetFileName(s);
                 }
             }
+        }
+
+        private void textBox_Search_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.Foreground = Brushes.Black;
+
+            var indices = new List<int>();
+
+            for (int i = 0; i < appNames.Length; i++)
+                if (appNames[i].IndexOf("", StringComparison.OrdinalIgnoreCase) >= 0)
+                    indices.Add(i);
+            int j = 0;
+            for (int i = 0; i < appNames.Length; i++)
+            {
+                if (j < indices.Count)
+                {
+                    makeAllButton(j, appNames[indices[j]]);
+                    j++;
+                }
+                else
+                {
+                    makeAllButton(j, "");
+                    j++;
+                }
+            }
+
+            //tb.GotFocus -= TextBox_GotFocus;
+
+        }
+
+        private void textBox_Search_KeyUp(object sender, KeyEventArgs e)
+        {
+            AllScroll.ScrollToTop();
+            TextBox tb = (TextBox)sender;
+            var indices = new List<int>();
+
+            for (int i = 0; i < appNames.Length; i++)
+                if (appNames[i].IndexOf(tb.Text, StringComparison.OrdinalIgnoreCase) >= 0)
+                    indices.Add(i);
+            int j = 0;
+            for (int i = 0; i < appNames.Length; i++)
+            {
+                if (j < indices.Count)
+                {
+                    makeAllButton(j, appNames[indices[j]]);
+                    j++;
+                }
+                else
+                {
+                    makeAllButton(j, "");
+                    j++;
+                }
+            }
+        }
+
+        private void textBox_Search_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            if (tb.Text.Equals(""))
+            {
+                tb.Text = "Search This PC";
+                tb.Foreground = Brushes.Gray;
+            }
+            
         }
     }
 }

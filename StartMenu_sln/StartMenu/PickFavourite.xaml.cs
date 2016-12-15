@@ -26,6 +26,8 @@ namespace StartMenu
         Image img;
         Label appLabel;
         Label labelDirectory;
+        MenuApplication storeApp;
+
         MenuApplication fileAdd;
         MenuApplication folderAdd;
         MenuApplication chromeApp;
@@ -57,6 +59,7 @@ namespace StartMenu
             button5.Content = chromeApp.nameSpaces;
             button6.Content = paintApp.nameSpaces;
             button7.Content = webCamApp.nameSpaces;
+            button8.Content = storeApp.nameSpaces;
             addFolderButton.Content = folderAdd.nameSpaces;
             addFileButton.Content = fileAdd.nameSpaces;
         }
@@ -75,6 +78,8 @@ namespace StartMenu
             afterEffectsApp = new MenuApplication(data, "Adobe AfterEffects", directory + @"\images\dark\appbar.adobe.aftereffects.png");
             paintApp = new MenuApplication(data, "Paint", directory + @"\images\dark\appbar.draw.pencil.png");
             webCamApp = new MenuApplication(data, "Web Cam", directory + @"\images\dark\appbar.webcam.png");
+            storeApp = new MenuApplication(data, "Windows Store", directory + @"\images\dark\appbar.marketplace.png");
+
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -187,6 +192,13 @@ namespace StartMenu
             }
             this.Close();
 
+        }
+
+        private void button8_Click(object sender, RoutedEventArgs e)
+        {
+            img.Source = storeApp.img.Source;
+            appLabel.Content = storeApp.nameSpaces;
+            this.Close();
         }
     }
 }
